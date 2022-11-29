@@ -64,20 +64,35 @@ namespace CSharpShop
 
         public void SetPrezzo(double prezzo)
         {
-            this.prezzo = prezzo;
+            if (prezzo > 0)
+            {
+                this.prezzo = prezzo;
+            }
+            else
+            {
+                Console.WriteLine("il prezzo deve essere maggiore di 0");
+            }
         }
 
         public void SetIva(int iva)
         {
-            this.iva = iva;
+            if (iva >= 0)
+            {
+                this.iva = iva;
+            }
+            else
+            {
+                Console.WriteLine("l'iva non può essere negativa");
+            }
         }
 
         //metodi
         public void StampaPrezzo()
         {
-            Console.WriteLine("Prezzo (senza iva): " + prezzo);
+            //prezzo con 2 decimali
+            Console.WriteLine("Prezzo (senza iva): " + prezzo.ToString("F") + " euro");
             double prezzoTotale = prezzo / 100 * iva + prezzo;
-            Console.WriteLine("Prezzo (con iva): " + prezzoTotale);
+            Console.WriteLine("Prezzo (con iva): " + prezzoTotale.ToString("F") + " euro");
         }
 
         public void StampaNome()

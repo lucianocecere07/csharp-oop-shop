@@ -14,3 +14,17 @@ Testate poi i vostri oggetti Prodotto, istanziandoli e provando ad interagirci c
 che avete previsto e implementato.
 */
 
+using CSharpShop;
+
+//generare un numero random da 1 a 100
+Random generatoreNumeriRandom = new Random();
+int numeroRandom =  generatoreNumeriRandom.Next(1, 100);
+
+//creazione nuovo prodotto
+Prodotto prodottoNegozio = new Prodotto(numeroRandom, "shampoo", "per capelli normali", 1.60, 22);
+
+//stampa prezzo senza/con iva
+prodottoNegozio.StampaPrezzo();
+
+//stampa nome completo del prodotto
+prodottoNegozio.StampaNome();
