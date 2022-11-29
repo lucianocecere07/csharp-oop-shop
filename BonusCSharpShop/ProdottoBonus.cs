@@ -106,8 +106,10 @@ namespace BonusCSharpShop
             Console.WriteLine("------------------");
             Console.WriteLine("nome: " + nome);
             Console.WriteLine("descrizione: " + descrizione);
-            Console.WriteLine("prezzo(senza iva): " + prezzo.ToString("F") + " euro");
+            Console.WriteLine("prezzo (senza iva): " + prezzo.ToString("F") + " euro");
             Console.WriteLine("iva: " + iva + "%");
+            double prezzoTotale = prezzo / 100 * iva + prezzo;
+            Console.WriteLine("Prezzo (con iva): " + prezzoTotale.ToString("F") + " euro");
             Console.WriteLine("------------------");
         }
         
