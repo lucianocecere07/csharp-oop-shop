@@ -12,12 +12,13 @@ che vi aspettate di trovare nel negozio. Stampate poi l’elenco dei vostri prod
 
 using BonusCSharpShop;
 
+//METODO PRIVATO (PER LA CLASSE PRODOTTO)
 //generare un numero random da 1 a 100
 Random generatoreNumeriRandom = new Random();
 int numeroRandom = generatoreNumeriRandom.Next(1, 100);
 
 ProdottoBonus prodotto1 = new ProdottoBonus(numeroRandom, "shampoo", "per capelli normali", 1.60, 22);
-
+/*
 //stampa prezzo senza/con iva
 prodotto1.StampaPrezzo();
 
@@ -29,7 +30,7 @@ prodotto1.StampaProdotto();
 
 // codice con un pad left di 0 per arrivare a 8 caratteri
 prodotto1.CodicePadLeft();
-
+*/
 //LISTA
 //nuovi oggetti
 ProdottoBonus prodotto2 = new ProdottoBonus(numeroRandom, "sapone", "al profumo di arancia", 1.00, 22);
